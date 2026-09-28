@@ -36,28 +36,32 @@ fields.
 
 **Run history**
 
-[The agreement score of each run you did, in order. A single run is a complete answer if
-only one run occurred. **The last score in your list must match the agreement line in the
-`eval-run.txt` you committed** — that file is the record of your final run.]
+> agreement: 20/20 scored items  (bar: 18/20: PASS)
 
 **Package analysis**
 
-[Pick one scored package (`pkg-01` through `pkg-20` — the four `calib-` packages are never
-scored). Name it by id, say what your rubric decided and what the gold label said, and
-explain why your rubric read it that way.]
-
+I picked `pkg-20`. My rubric decided `reject`, and the gold label was also
+`reject`. The technical reproduction itself was strong, so the proof-oriented
+checks did not provide a reason to hold it. The deciding check was
+`repo-conventions`: Ghostty's stated policy requires disclosure of AI use, but
+the submitted comments did not include that disclosure. Because
+`repo-conventions` is required, that failure made the final verdict `reject`.
 **Check rationale**
 
-[Quote one check from the `rubric.md` you uploaded to `tools/repro-check/`, exactly as it reads now.
-Then say why it reads that way — what you revised to get there, or what you rejected in
-favour of it.]
+> | `target-behavior` | The issue's described expected/problem behavior read against the repro report's observed result and its direct artifacts, especially output excerpts, tracebacks, logs, screenshots, responses, or test results. | Pass when the artifacts demonstrate the same behavior the issue describes, or, for a cannot-reproduce result, demonstrate that the attempted target behavior did not occur under the recorded conditions. Fail when the evidence instead demonstrates an adjacent, setup, dependency, permission, network, or otherwise different failure and presents it as the target issue. | required |
+
+I wrote this check to distinguish reproducing the actual reported behavior
+from simply encountering an error while attempting the reproduction. I also
+wanted an evidenced cannot-reproduce to remain valid rather than encouraging
+the grader to treat every unsuccessful reproduction as a failure.
 
 **Trade-offs**
 
-[Every check gives something up. Any one of these is a complete answer: a package whose
-result it changes, a canary you re-ran with `--only`, a case you accept it will miss, or a
-stated reason nothing changed elsewhere. "Nothing changed, and here is how I know" earns
-the point in full when the reason follows.]
+This check is deliberately strict about matching the reported behavior. That
+means a package can be held even when it discovers a legitimate nearby bug,
+because evidence of a different failure does not establish the issue being
+reproduced. I accept that trade-off because the purpose of the report is to
+give maintainers reliable evidence about the specific issue being discussed.
 
 ---
 
