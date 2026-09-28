@@ -15,8 +15,7 @@ label is not graded.
 
 **GitHub username**
 
-[Your GitHub username, exactly as it appears on your profile — no `@`, no profile URL. Your
-comments upstream are identified by this name.]
+tonybuii2003
 
 ---
 
@@ -24,16 +23,11 @@ comments upstream are identified by this name.]
 
 **Claim comment**
 
-[Link to the comment where you claimed the issue. Use the comment's own permalink, not the
-issue page on its own. **Then paste the text of that comment underneath the link** — the
-pasted text is what this field is graded on, so copy across what you actually posted.]
+https://github.com/codepath/pathreview-ai301-fa26-s3/issues/69#issuecomment-5763196523
 
 **Reproduction comment**
 
-[Link to the comment where you posted your reproduction. It must record the environment
-(OS, relevant versions, code state), steps a stranger could follow, and what you observed.
-**Then paste the text of that comment underneath the link** — the pasted text is what this
-field is graded on, so copy across what you actually posted.]
+https://github.com/codepath/pathreview-ai301-fa26-s3/issues/69#issuecomment-5862863133
 
 ## Eval iterations
 
